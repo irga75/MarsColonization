@@ -56,5 +56,31 @@ def return_image_mars():
         </body>"""
 
 
+@app.route('/promotion_image')
+def return_promotion_image():
+    return f"""<!DOCTYPE html>
+    <html lang="ru">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewpoint" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+            crossorigin="anonymous">
+            <link rel="stylesheet"
+            href="{url_for('static', filename='css/style.css')}">
+            <title>Колонизация</title>
+        </head>
+        <body>
+            <h1>Жди нас, Марс!</h1>
+            <img src="{url_for('static', filename='img/mars.png')}" width="220" alt="Изображение Марса">
+            <div class="p-3 mb-2 bg-warning text-dark">Человечество вырастает из детства.</div>
+            <div class="p-3 mb-2 bg-info text-dark">Человечеству мала одна планета.</div>
+            <div class="p-3 mb-2 bg-danger text-white">Мы сделаем обитаемыми безжизненные пока планеты.</div>
+            <div class="p-3 mb-2 bg-success text-white">И начнем с Марса!</div>
+            <div class="p-3 mb-2 bg-primary text-white">Присоединяйся!</div>
+        </body>"""
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
